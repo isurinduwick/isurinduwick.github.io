@@ -1,26 +1,38 @@
+# Personal Portfolio Website
 
-<h2> Portfolio Website </h2>
-A responsive and modern portfolio website built with HTML, CSS, JavaScript, and Bootstrap. This website showcases my skills, projects, and contact information.<br>
-<br>
+Welcome to my personal portfolio website! This project showcases my skills, projects, and experience in software engineering and development.
 
-<b>Features<br></b>
+## 📝 About
+This is my personal website, built to present my professional journey, projects, and contact details. It is designed to be simple, modern, and responsive.
 
-Fully responsive design using Bootstrap.<br>
-Clean and modern layout.<br>
-Interactive animations with JavaScript.<br>
-Easy navigation to different sections (About, Projects, Contact).<br>
-Cross-browser compatibility.<br>
-<br>
-Technologies Used<br>
-<br>
-HTML5: Structure of the website.<br>
-CSS3: Styling and layout.<br>
-JavaScript: Interactivity and animations.<br>
-Bootstrap: Responsive grid and components.<br>
-<br>
-<h3>Setup and Installation</h3><br>
-1.Clone this repository to your local machine<br>
-2.Navigate to the project directory<br>
-3.Open the index.html file in your browser<br>
+## 🚀 Technologies Used
+- **HTML** - For structuring the content
+- **CSS** - For styling and layout
+- **JavaScript** - For interactivity and dynamic elements
+- **Bootstrap** - For responsive design
+- **GitHub Pages** - For hosting the website
+
+## 📌 Features
+- Personal bio and resume
+- Showcase of projects with descriptions and links
+- Contact form for easy communication
+- Mobile-friendly and fully responsive design
+
+## 📂 Installation & Setup
+To run this project locally:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/isurinduwick/isurinduwick.github.io.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd isurinduwick.github.io
+   ```
+3. Open `index.html` in your browser.
+
+## 🌍 Live Demo
+You can view the live website here: [isurinduwick.github.io](https://isurinduwick.github.io/)
+
+
 
 
