@@ -247,8 +247,16 @@ nav {
     margin-bottom: 40px;
 }
 
+.hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
 .hero-btns .btn {
-    margin-right: 15px;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .btn-cv {
@@ -970,6 +978,18 @@ footer {
         font-size: 1rem;
     }
 
+    .hero-btns {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-btns .btn {
+        min-width: 140px;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -980,5 +1000,17 @@ footer {
     
     .copyright {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btns .btn {
+        width: 80%;
+        margin-bottom: 10px;
     }
 }
