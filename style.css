@@ -441,15 +441,12 @@ social-icons {
     overflow: hidden;
 }
 
-.project-image img {
+.project-image img,
+.project-image video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.1);
+    object-fit: contain;
+    display: block;
 }
 
 .project-content {
