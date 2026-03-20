@@ -517,12 +517,33 @@ function openProjectModal(projectCard) {
     const projectName = projectCard.getAttribute('data-project-name');
     const mediaType = projectCard.getAttribute('data-media');
     const mediaSrc = projectCard.getAttribute('data-media-src');
+    const githubLink = projectCard.getAttribute('data-github');
+    const demoLink = projectCard.getAttribute('data-demo');
 
     // Get project content details
     const projectContent = projectCard.querySelector('.project-content');
     const description = projectContent.querySelector('p').textContent;
     const techStack = projectContent.querySelector('.project-tech').innerHTML;
-    const projectLinks = projectContent.querySelector('.project-links').innerHTML;
+
+    // Build project links HTML
+    let projectLinksHTML = '<div class="project-links">';
+    if (githubLink && githubLink !== '#') {
+        projectLinksHTML += `
+            <a href="${githubLink}" class="project-link" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+                <span>View Code</span>
+            </a>
+        `;
+    }
+    if (demoLink && demoLink !== '#') {
+        projectLinksHTML += `
+            <a href="${demoLink}" class="project-link" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+                <span>Live Demo</span>
+            </a>
+        `;
+    }
+    projectLinksHTML += '</div>';
 
     // Set modal title
     modalTitle.textContent = projectName;
@@ -557,7 +578,7 @@ function openProjectModal(projectCard) {
     modalDescription.innerHTML = `
         <p>${description}</p>
         <div class="project-tech">${techStack}</div>
-        <div class="project-links">${projectLinks}</div>
+        ${projectLinksHTML}
     `;
 
     // Show modal
