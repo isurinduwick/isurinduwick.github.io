@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isurindu Wickramasinghe | Software Engineer</title>
-    <meta name="description" content="Software Engineer specializing in web development, machine learning, and innovative solutions">
+    <title>Isurindu Wickramasinghe | Mobile & Web Developer 2026</title>
+    <meta name="description" content="Professional Mobile & Web Developer specializing in Flutter, Laravel, React. Building production-ready applications with modern technologies.">
+    <meta name="keywords" content="Flutter Developer, Laravel Developer, Mobile App Development, Web Development, React Developer, Sri Lanka">
+    <meta name="author" content="Isurindu Wickramasinghe">
+    <meta property="og:title" content="Isurindu Wickramasinghe | Mobile & Web Developer">
+    <meta property="og:description" content="Professional Mobile & Web Developer with industry experience in Flutter, Laravel, and React">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+
     <header id="header">
         <div class="container">
             <nav>
@@ -34,67 +42,335 @@
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
         <div class="container">
             <div class="hero-content animate-fade-in">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for Freelance Projects
+                </div>
                 <div class="hero-name">Hello, I'm</div>
-                <h1><span class="typing-text"></span></h1>
-                <p>Software Engineering Professional specializing in creating efficient, scalable solutions through innovative approaches and modern technologies.</p>
+                <h1><span class="typing-text">Isurindu Wickramasinghe</span></h1>
+                <div class="hero-title">
+                    <span class="title-prefix">Professional</span>
+                    <span class="rotating-text">Mobile Developer</span>
+                </div>
+                <p class="hero-description">Crafting production-ready mobile and web applications with Flutter, Laravel, and React. Transforming ideas into scalable digital solutions that users love.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="2">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
                 <div class="hero-btns">
-                    <a href="#projects" class="btn">View Projects</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Let's Talk</span>
+                        <i class="fas fa-message"></i>
+                    </a>
                     <a href="#" class="btn btn-cv" id="cv-download">
-                        <i class="fas fa-download"></i> Download CV
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
                     </a>
                 </div>
-                <div class="social-icons vertical">
-                 <!--<a href="https://github.com/isurinduwick" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/isurindu-wickramasinghe-0ab608213/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>-->  
-                    <br>
-                    <br> 
+                <div class="social-links-hero">
+                    <a href="https://github.com/isurinduwick" class="social-link" aria-label="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/isurindu-wickramasinghe-0ab608213/" class="social-link" aria-label="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
-                <br>
-                <br>
-                <br>
             </div>
             <div class="hero-image animate-fade-in">
-                <img src="img/WhatsApp Image 2025-04-01 at 11.22.31.jpeg" alt="Isurindu Wickramasinghe">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <img src="img/WhatsApp Image 2025-04-01 at 11.22.31.jpeg" alt="Isurindu Wickramasinghe - Mobile & Web Developer">
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fab fa-flutter"></i>
+                    <span>Flutter</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fab fa-laravel"></i>
+                    <span>Laravel</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
+            <div class="about-content animate-from-right">
+                <div class="section-label">About Me</div>
+                <h2>Mobile & Web Developer with Real-World Impact</h2>
+                <p class="lead-text">I’m a Mobile & Web Developer with hands-on industry experience, specializing in building production-ready, scalable, and user-focused applications.</p>
 
-                <div class="about-content animate-from-right">
-                    <h2>About Me</h2>
-                    <p><b>I'm a Mobile & Web Developer with hands on industry experience,</b> specializing in building production ready, scalable, and user-focused applications.<br>
+                <div class="about-details">
+                    <p>My core expertise lies in <span class="highlight">Flutter</span> for cross-platform mobile app development (Android & iOS) and <span class="highlight">Laravel</span> for backend and web systems. I’ve worked on real-world applications currently live in production, handling everything from UI/UX implementation to API integration, database management, and performance optimization.</p>
 
-My core expertise is in <b>Flutter </b> for cross platform mobile app development (Android & iOS) and Laravel for backend and web systems.<br> <b>I’ve worked on real world applications currently live in production,</b> handling everything from UI/UX implementation to API integration, database management, and performance optimization.
+                    <p>I enjoy taking full ownership of projects, working independently, and collaborating closely with clients to transform ideas into reliable digital products. I’m recognized for my fast learning ability, strong logical thinking, and analytical problem-solving skills, which help me adapt quickly to new technologies and project requirements.</p>
 
-I enjoy taking full ownership of projects, working independently, and collaborating closely with clients to transform ideas into reliable digital products.<br><br> I’m recognized for my fast learning ability, strong logical thinking, and analytical problem-solving skills, which help me adapt quickly to new technologies and project requirements.
+                    <p>I’m also actively exploring <span class="highlight">AI integration</span> in modern mobile and web architectures to build smarter and more efficient applications.</p>
+                </div>
 
-<b>I’m also actively exploring AI integration in modern mobile and web architectures to build smarter and more efficient applications.</b>
+                <div class="availability-banner">
+                    <i class="fas fa-circle-check"></i>
+                    <div>
+                        <strong>Currently Available for Freelance Projects</strong>
+                        <p>Open to both short-term and long-term collaborations</p>
+                    </div>
+                </div>
 
-<br><br><h4>👉 <b>I am currently available for freelance projects and open to both short term and long term collaborations.</h4></b></p>
-                    
-                    <div class="skills-container">
-                        <h3>What I Do</h3>
-                        <div class="skills">
-                            <span class="skill-tag">Mobile App Development</span>
-                            <span class="skill-tag">Google Play Store Deployment & App Publishing</span>
-                            <span class="skill-tag">REST API Development, Integration & Documentation</span>
-                            <span class="skill-tag">Mobile App Performance Optimization</span>
-                            <span class="skill-tag">App Security Improvements (Authentication, Data Protection)</span>
-                            <span class="skill-tag">Web Application Development</span>
-                            <span class="skill-tag">Backend Architecture & Database Design</span>
-                            <span class="skill-tag">Web Application Optimization & Performance Tuning</span>
-                            <span class="skill-tag">Third-Party API Integration (Payments, Social Login, Notifications)</span>
-                            <span class="skill-tag">App Maintenance, Updates & Feature Enhancements</span>
-                            <span class="skill-tag">Full-Stack Web & Mobile App Development</span>
-                            <span class="skill-tag">Bug Fixing & Code Refactoring</span>
-                            
+                <div class="skills-container">
+                    <h3>What I Do</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Mobile Development</h4>
+                            <p>Cross-platform apps with Flutter, Google Play deployment, and performance optimization</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Web Development</h4>
+                            <p>Full-stack web applications with React, Laravel, and modern frameworks</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Backend & APIs</h4>
+                            <p>RESTful API development, integration, documentation, and database architecture</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <h4>Security & Performance</h4>
+                            <p>App security improvements, authentication, data protection, and optimization</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <h4>Third-Party Integration</h4>
+                            <p>Payments, social login, push notifications, and external APIs</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <h4>Maintenance & Support</h4>
+                            <p>Bug fixing, code refactoring, updates, and feature enhancements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Technologies</div>
+                <h2>Tech Stack & Tools</h2>
+                <p>Technologies I use to bring ideas to life</p>
+            </div>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3><i class="fas fa-mobile-screen"></i> Mobile Development</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon flutter">
+                                <i class="fab fa-flutter"></i>
+                            </div>
+                            <span>Flutter</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon dart">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span>Dart</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon android">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <span>Android</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon ios">
+                                <i class="fab fa-apple"></i>
+                            </div>
+                            <span>iOS</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3><i class="fas fa-window-restore"></i> Web Development</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon react">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <span>React</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon laravel">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <span>Laravel</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon node">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span>Node.js</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon typescript">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span>TypeScript</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3><i class="fas fa-database"></i> Backend & Database</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon firebase">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <span>Firebase</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon mysql">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MySQL</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon api">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <span>REST APIs</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon php">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <span>PHP</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-category">
+                    <h3><i class="fas fa-toolbox"></i> Tools & Others</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon git">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span>Git</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon figma">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <span>Figma</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon postman">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <span>Postman</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon docker">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span>Docker</span>
+                            <div class="proficiency-bar">
+                                <div class="proficiency-fill" style="width: 70%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,256 +381,277 @@ I enjoy taking full ownership of projects, working independently, and collaborat
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
+                <div class="section-label">Portfolio</div>
                 <h2>Featured Projects</h2>
-                <p>A curated selection of projects demonstrating my technical capabilities and problem-solving approach.</p>
+                <p>A showcase of production-ready applications demonstrating technical excellence and problem-solving</p>
             </div>
             <div class="projects-grid">
                 <!-- Project Girlee -->
-                <div class="project-card animate-from-bottom" style="animation-delay: 0.2s">
-                    <div class="project-image">
-                        <video controls src="img/Girlee.mp4"></video>
+                <div class="project-card animate-from-bottom" style="animation-delay: 0.1s"
+                     data-project-name="Girlee Sri Lanka Website"
+                     data-media="video"
+                     data-media-src="img/Girlee.mp4">
+                    <div class="project-badge">Freelance</div>
+                    <div class="project-image" onclick="openProjectModal(this.closest('.project-card'))">
+                        <video src="img/Girlee.mp4"></video>
+                        <div class="project-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Girlee Srilanka Website </h3>
-                        <p>Developed the official Girlee Clothing Brand website as a <b>freelance</b> project to showcase fashion collections, enhance brand identity, and improve online engagement. The website features a modern, responsive design focused on delivering a smooth and visually appealing user experience.</p>
+                        <h3>Girlee Sri Lanka Website</h3>
+                        <p>Developed the official Girlee Clothing Brand website as a freelance project to showcase fashion collections, enhance brand identity, and improve online engagement. Features a modern, responsive design focused on delivering a smooth and visually appealing user experience.</p>
                         <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                            <span>RestApi</span>
-                            <span>Typescript</span>
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fab fa-node-js"></i> Node.js</span>
+                            <span><i class="fas fa-fire"></i> Firebase</span>
+                            <span><i class="fas fa-plug"></i> REST API</span>
+                            <span><i class="fas fa-code"></i> TypeScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/isurinduwick/Girlee-Clothing-Frontend" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
+                            <a href="https://github.com/isurinduwick/Girlee-Clothing-Frontend" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
                             </a>
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Project Help Srilanka -->
-                <div class="project-card animate-from-bottom" style="animation-delay: 0.2s">
-                    <div class="project-image">
-                        <video controls src="img/HelpSrilanka.mp4"></video>
+                <div class="project-card animate-from-bottom featured" style="animation-delay: 0.2s"
+                     data-project-name="Help Sri Lanka WebApp"
+                     data-media="video"
+                     data-media-src="img/HelpSrilanka.mp4">
+                    <div class="project-badge special">Social Impact 💙</div>
+                    <div class="project-image" onclick="openProjectModal(this.closest('.project-card'))">
+                        <video src="img/HelpSrilanka.mp4"></video>
+                        <div class="project-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Help Srilanka WebApp <h5>💙</h5></h3>
-                        <p>Developed Help Sri Lanka as a <b>freelance</b> project under AgileWave, a social impact digital platform designed to support students, teachers, and schools across Sri Lanka. The platform provides access to educational resources, study materials, and essential support while connecting donors, educators, and learners to empower education through shared knowledge and digital contributions. <b>This project is being developed with the intention of handing over to the Sri Lankan government free of charge</b> for nationwide educational benefit.</p>
+                        <h3>Help Sri Lanka WebApp</h3>
+                        <p>Developed as a freelance project under AgileWave, this social impact digital platform supports students, teachers, and schools across Sri Lanka. Provides access to educational resources, study materials, and connects donors with learners. Being developed for free handover to the Sri Lankan government for nationwide educational benefit.</p>
                         <div class="project-tech">
-                            <span>React</span>
-                            <span>Laravel</span>
-                            <span>Firebase</span>
-                            <span>RestApi</span>
-                            <span>Typescript</span>
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fab fa-laravel"></i> Laravel</span>
+                            <span><i class="fas fa-fire"></i> Firebase</span>
+                            <span><i class="fas fa-plug"></i> REST API</span>
+                            <span><i class="fas fa-code"></i> TypeScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/AgilWave/Help-srilanka-frontend" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
+                            <a href="https://github.com/AgilWave/Help-srilanka-frontend" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
                             </a>
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Project 1 -->
-                <div class="project-card animate-from-bottom">
-                    <div class="project-image">
-                        <img src="img/nextlearnlms.png" alt="E-Commerce Platform">
+                <div class="project-card animate-from-bottom" style="animation-delay: 0.3s"
+                     data-project-name="NextLearn LMS Web"
+                     data-media="image"
+                     data-media-src="img/nextlearnlms.png">
+                    <div class="project-badge">Web App</div>
+                    <div class="project-image" onclick="openProjectModal(this.closest('.project-card'))">
+                        <img src="img/nextlearnlms.png" alt="NextLearn LMS">
+                        <div class="project-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Next Learn Lms Web</h3>
-                        <p>NextLearn Web is a modern and interactive Learning Management System (LMS) designed to streamline online education. </p>
+                        <h3>NextLearn LMS Web</h3>
+                        <p>A modern and interactive Learning Management System designed to streamline online education with comprehensive features for course management and student engagement.</p>
                         <div class="project-tech">
-                            <span>Laravel</span>
-                            <span>Node.js</span>
-                            <span>SQLLite</span>
-                            <span>Typescript</span>
-                            <span>Stripe API</span>
+                            <span><i class="fab fa-laravel"></i> Laravel</span>
+                            <span><i class="fab fa-node-js"></i> Node.js</span>
+                            <span><i class="fas fa-database"></i> SQLite</span>
+                            <span><i class="fas fa-code"></i> TypeScript</span>
+                            <span><i class="fab fa-stripe"></i> Stripe</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Ravidu-Senevirathne/nextLearn.git" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
+                            <a href="https://github.com/Ravidu-Senevirathne/nextLearn.git" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
                             </a>
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card animate-from-bottom" style="animation-delay: 0.2s">
-                    <div class="project-image">
-                        <img src="img/Untitled design (2).png" alt="Task Management App">
+                <div class="project-card animate-from-bottom" style="animation-delay: 0.4s"
+                     data-project-name="NextLearn Mobile App"
+                     data-media="image"
+                     data-media-src="img/Untitled design (2).png">
+                    <div class="project-badge">Mobile App</div>
+                    <div class="project-image" onclick="openProjectModal(this.closest('.project-card'))">
+                        <img src="img/Untitled design (2).png" alt="NextLearn Mobile">
+                        <div class="project-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Next Learn Mobile App</h3>
-                        <p>NextLearn Mobile is a feature-rich Learning Management System (LMS) app designed to bring seamless education to your fingertips.</p>
+                        <h3>NextLearn Mobile App</h3>
+                        <p>Feature-rich Learning Management System mobile app built with Flutter, bringing seamless education experience to your fingertips with cross-platform compatibility.</p>
                         <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>Firebase</span>
-                            <span>RestApi</span>
-                            <span>Node.js</span>
+                            <span><i class="fab fa-flutter"></i> Flutter</span>
+                            <span><i class="fas fa-code"></i> Dart</span>
+                            <span><i class="fas fa-fire"></i> Firebase</span>
+                            <span><i class="fas fa-plug"></i> REST API</span>
+                            <span><i class="fab fa-node-js"></i> Node.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/isurinduwick/Next-Learn-Lms-Flutter.git" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
+                            <a href="https://github.com/isurinduwick/Next-Learn-Lms-Flutter.git" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
                             </a>
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card animate-from-bottom" style="animation-delay: 0.4s">
-                    <div class="project-image">
-                        <img src="img/Untitled design (3).png" alt="Machine Learning Image Classifier">
+                <div class="project-card animate-from-bottom" style="animation-delay: 0.5s"
+                     data-project-name="Energym Web"
+                     data-media="image"
+                     data-media-src="img/Untitled design (3).png">
+                    <div class="project-badge">Web App</div>
+                    <div class="project-image" onclick="openProjectModal(this.closest('.project-card'))">
+                        <img src="img/Untitled design (3).png" alt="Energym Web">
+                        <div class="project-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Energym Web</h3>
-                        <p>Energym-Web is a dynamic and user-friendly gym management website designed to streamline fitness center operations. </p>
+                        <p>Dynamic and user-friendly gym management website designed to streamline fitness center operations with member management and class scheduling features.</p>
                         <div class="project-tech">
-                            <span>Laravel</span>
-                            <span>PHP</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>SQL</span>
-                            <span>Authentication</span>
+                            <span><i class="fab fa-laravel"></i> Laravel</span>
+                            <span><i class="fab fa-php"></i> PHP</span>
+                            <span><i class="fab fa-html5"></i> HTML/CSS</span>
+                            <span><i class="fas fa-database"></i> SQL</span>
+                            <span><i class="fas fa-lock"></i> Auth</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/isurinduwick/energym_Web.git" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
+                            <a href="https://github.com/isurinduwick/energym_Web.git" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
                             </a>
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card animate-from-bottom" style="animation-delay: 0.6s">
-                    <div class="project-image">
-                        <img src="img/Untitled design (4).png" alt="Mobile Application">
+                <div class="project-card animate-from-bottom" style="animation-delay: 0.6s"
+                     data-project-name="Medicare Healthcare App"
+                     data-media="image"
+                     data-media-src="img/Untitled design (4).png">
+                    <div class="project-badge">Mobile App</div>
+                    <div class="project-image" onclick="openProjectModal(this.closest('.project-card'))">
+                        <img src="img/Untitled design (4).png" alt="Medicare Mobile App">
+                        <div class="project-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Medicare Helthcare Mobile App</h3>
-                        <p>MediCare App is a Flutter-based mobile application designed to enhance healthcare accessibility. It allows users to book doctor appointments, access medical records, receive medication reminders, and connect with healthcare professionals seamlessly.</p>
+                        <h3>Medicare Healthcare App</h3>
+                        <p>Flutter-based mobile application enhancing healthcare accessibility. Features appointment booking, medical records access, medication reminders, and seamless connection with healthcare professionals.</p>
                         <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                            <span>Facebook Authentication</span>
-                            <span>Relam</span>
-                            <span>google Authentication</span>
+                            <span><i class="fab fa-flutter"></i> Flutter</span>
+                            <span><i class="fas fa-fire"></i> Firebase</span>
+                            <span><i class="fab fa-facebook"></i> FB Auth</span>
+                            <span><i class="fas fa-database"></i> Realm</span>
+                            <span><i class="fab fa-google"></i> Google Auth</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/isurinduwick/medicare.git" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
+                            <a href="https://github.com/isurinduwick/medicare.git" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
                             </a>
                             <a href="#" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 5 -->
-                <div class="project-card animate-from-bottom" style="animation-delay: 0.8s">
-                    <div class="project-image">
-                        <img src="img/Untitled design (5).png" alt="Data Analysis Dashboard">
+                <div class="project-card animate-from-bottom" style="animation-delay: 0.7s"
+                     data-project-name="Roam Sri Lanka Travel Web"
+                     data-media="image"
+                     data-media-src="img/Untitled design (5).png">
+                    <div class="project-badge">Web App</div>
+                    <div class="project-image" onclick="openProjectModal(this.closest('.project-card'))">
+                        <img src="img/Untitled design (5).png" alt="Roam Sri Lanka">
+                        <div class="project-overlay">
+                            <div class="overlay-icon">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>Roam Srilanka Travel Web</h3>
-                        <p>Roam Sri Lanka is a travel website designed to help explorers discover the beauty of Sri Lanka. It offers detailed insights into stunning destinations, cultural landmarks, and hidden gems across the island. With a user-friendly interface and engaging visuals</p>
+                        <h3>Roam Sri Lanka Travel Web</h3>
+                        <p>Travel website designed to help explorers discover the beauty of Sri Lanka with detailed insights into stunning destinations, cultural landmarks, and hidden gems with a user-friendly interface.</p>
                         <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Auth0</span>
-                            <span>PHP</span>
+                            <span><i class="fab fa-html5"></i> HTML</span>
+                            <span><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                            <span><i class="fas fa-lock"></i> Auth0</span>
+                            <span><i class="fab fa-php"></i> PHP</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/isurinduwick/RoamSriLanka.github.io.git" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
+                            <a href="https://github.com/isurinduwick/RoamSriLanka.github.io.git" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
                             </a>
-                            <a href="https://isurinduwick.github.io/RoamSriLanka.github.io/" class="project-link">
+                            <a href="https://isurinduwick.github.io/RoamSriLanka.github.io/" class="project-link" target="_blank" rel="noopener">
                                 <i class="fas fa-external-link-alt"></i>
-                                Live Demo
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project 6
-                <div class="project-card animate-from-bottom" style="animation-delay: 1.0s">
-                    <div class="project-image">
-                        <img src="img/project6.jpg" alt="Mobile App UI">
-                    </div>
-                    <div class="project-content">
-                        <h3>HealthTrack Mobile App</h3>
-                        <p>A comprehensive health and fitness tracking application that helps users monitor their daily activities, nutrition, and wellness goals.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>Firebase</span>
-                            <span>Google Fit API</span>
-                            <span>Health Kit</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/isurinduwick/health-tracker-app" class="project-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                Repository
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>-->
                 <br>
             </div><br>
             <div class="section-cta">
-                <a href="https://github.com/isurinduwick" class="btn btn-outline" target="_blank">
-                    <i class="fab fa-github"></i> View More on GitHub
+                <p class="cta-text">Want to see more?</p>
+                <a href="https://github.com/isurinduwick" class="btn btn-github" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                    <span>Explore More on GitHub</span>
                 </a>
             </div>
-        </div> 
+        </div>
     </section>
 
     <section id="resume" class="resume">
@@ -407,75 +704,93 @@ I enjoy taking full ownership of projects, working independently, and collaborat
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Interested in working together? Feel free to reach out through any of the following channels.</p>
+                <div class="section-label">Get In Touch</div>
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind? Let's discuss how I can help bring your ideas to life</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                    <p class="contact-intro">Feel free to reach out through any of these channels. I typically respond within 24 hours.</p>
+
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:isurindurathmal@gmail.com">isurindurathmal@gmail.com</a>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <a href="mailto:contact@isurindu.com">isurindurathmal@gmail.com</a>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+94714516562">+94 71 451 6562</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Kurunegala, Sri Lanka</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Availability</h4>
+                                <p>Open for freelance work</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Phone</h4>
-                            <p>+94 71 451 6562</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Location</h4>
-                            <p>Kurunegala, Sri Lanka</p>
-                        </div>
-                    </div>
+
                     <div class="contact-social">
-                   <!-- <h4>Connect With Me</h4>-->
-                        <div class="social-icons">
-                            <br>
-                            <br>
-                        <!--<a href="https://github.com/isurinduwick" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <br>
-                            <a href="https://www.linkedin.com/in/isurindu-wickramasinghe-0ab608213/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <br>
-                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+                        <h4>Connect With Me</h4>
+                        <div class="social-links-contact">
+                            <a href="https://github.com/isurinduwick" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/isurindu-wickramasinghe-0ab608213/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
                         </div>
-                        <br>
                     </div>
-                    <br>
                 </div>
-                <div class="contact-form">
-                    <h3>Send Me a Message</h3>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-submit">Send Message</button>
-                    </form>
+
+                <div class="contact-form-wrapper">
+                    <div class="contact-form">
+                        <h3>Send Me a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" class="form-control" placeholder="Project Discussion" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -486,52 +801,49 @@ I enjoy taking full ownership of projects, working independently, and collaborat
             <div class="footer-grid">
                 <div class="footer-col footer-about">
                     <div class="footer-logo">Isurindu<span>Wick</span></div>
-                    <p>A passionate software engineer dedicated to creating efficient and innovative solutions using cutting-edge technologies.</p>
+                    <p>Professional Mobile & Web Developer dedicated to creating efficient and innovative solutions using cutting-edge technologies.</p>
                     <div class="footer-social">
-                        <a href="https://github.com/isurinduwick" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/isurindu-wickramasinghe-0ab608213/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/isurinduwick" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/isurindu-wickramasinghe-0ab608213/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col footer-links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#tech-stack">Technologies</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#resume">Resume</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col footer-services">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Mobile App Development</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">API Integration</a></li>
-                        <li><a href="#">Software Consulting</a></li>
+                        <li><a href="#about">Mobile App Development</a></li>
+                        <li><a href="#about">Web Development</a></li>
+                        <li><a href="#about">Backend & APIs</a></li>
+                        <li><a href="#about">Performance Optimization</a></li>
+                        <li><a href="#about">App Publishing</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col footer-contact">
                     <h4>Contact Me</h4>
                     <p><i class="fas fa-map-marker-alt"></i> Kurunegala, Sri Lanka</p>
-                    <p><i class="fas fa-phone"></i> +94 71 451 6562</p>
-                    <p><i class="fas fa-envelope"></i> isurindurathmal@gmail.com</p>
-                    <p><i class="fas fa-clock"></i> Available: 9 AM - 6 PM</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+94714516562">+94 71 451 6562</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:isurindurathmal@gmail.com">isurindurathmal@gmail.com</a></p>
+                    <p><i class="fas fa-circle-check"></i> Available for Freelance</p>
                 </div>
             </div>
-            
+
             <div class="footer-divider"></div>
-            
+
             <div class="copyright">
                 <p>&copy; <span id="current-year"></span> Isurindu Wickramasinghe. All Rights Reserved.</p>
-                <p class="footer-credits">Designed with <i class="fas fa-heart"></i> by Isurindu</p>
+                <p class="footer-credits">Built with passion <i class="fas fa-heart"></i> using modern web technologies</p>
             </div>
         </div>
     </footer>
@@ -539,6 +851,25 @@ I enjoy taking full ownership of projects, working independently, and collaborat
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-media">
+                    <!-- Media content will be dynamically inserted here -->
+                </div>
+                <div class="modal-info">
+                    <h3 class="modal-title"></h3>
+                    <div class="modal-description"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
