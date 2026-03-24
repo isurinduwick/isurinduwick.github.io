@@ -519,6 +519,8 @@ function openProjectModal(projectCard) {
     const mediaSrc = projectCard.getAttribute('data-media-src');
     const githubLink = projectCard.getAttribute('data-github');
     const demoLink = projectCard.getAttribute('data-demo');
+    const playstoreLink = projectCard.getAttribute('data-playstore');
+    const galleryData = projectCard.getAttribute('data-gallery');
 
     // Get project content details
     const projectContent = projectCard.querySelector('.project-content');
@@ -540,6 +542,14 @@ function openProjectModal(projectCard) {
             <a href="${demoLink}" class="project-link" target="_blank" rel="noopener">
                 <i class="fas fa-external-link-alt"></i>
                 <span>Live Demo</span>
+            </a>
+        `;
+    }
+    if (playstoreLink && playstoreLink !== '#') {
+        projectLinksHTML += `
+            <a href="${playstoreLink}" class="project-link" target="_blank" rel="noopener">
+                <i class="fab fa-google-play"></i>
+                <span>Play Store</span>
             </a>
         `;
     }
@@ -565,6 +575,37 @@ function openProjectModal(projectCard) {
                     Your browser does not support the video tag.
                 </video>
             `;
+        } else if (mediaType === 'gallery' && galleryData) {
+            // Parse gallery images
+            const galleryImages = JSON.parse(galleryData);
+            let galleryHTML = `
+                <div class="image-gallery">
+                    <div class="gallery-main">
+                        <img src="${mediaSrc}" alt="${projectName}" id="gallery-main-image">
+                        ${galleryImages.length > 0 ? `
+                            <button class="gallery-nav gallery-prev" onclick="changeGalleryImage(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-nav gallery-next" onclick="changeGalleryImage(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        ` : ''}
+                    </div>
+                    ${galleryImages.length > 0 ? `
+                        <div class="gallery-thumbs">
+                            <img src="${mediaSrc}" class="gallery-thumb active" onclick="selectGalleryImage(this, '${mediaSrc}')">
+                            ${galleryImages.map(img => `
+                                <img src="${img}" class="gallery-thumb" onclick="selectGalleryImage(this, '${img}')">
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+            modalMedia.innerHTML = galleryHTML;
+
+            // Store gallery images for navigation
+            window.galleryImages = [mediaSrc, ...galleryImages];
+            window.currentGalleryIndex = 0;
         } else {
             const img = new Image();
             img.onload = () => {
@@ -604,6 +645,59 @@ function closeProjectModal() {
 
     // Remove escape key listener
     document.removeEventListener('keydown', handleModalEscape);
+
+    // Clear gallery data
+    window.galleryImages = null;
+    window.currentGalleryIndex = 0;
+}
+
+function changeGalleryImage(direction) {
+    if (!window.galleryImages || window.galleryImages.length === 0) return;
+
+    window.currentGalleryIndex += direction;
+
+    // Loop around
+    if (window.currentGalleryIndex < 0) {
+        window.currentGalleryIndex = window.galleryImages.length - 1;
+    } else if (window.currentGalleryIndex >= window.galleryImages.length) {
+        window.currentGalleryIndex = 0;
+    }
+
+    // Update main image
+    const mainImage = document.getElementById('gallery-main-image');
+    if (mainImage) {
+        mainImage.src = window.galleryImages[window.currentGalleryIndex];
+    }
+
+    // Update active thumbnail
+    updateActiveThumbnail();
+}
+
+function selectGalleryImage(thumbnail, imgSrc) {
+    // Update main image
+    const mainImage = document.getElementById('gallery-main-image');
+    if (mainImage) {
+        mainImage.src = imgSrc;
+    }
+
+    // Update current index
+    if (window.galleryImages) {
+        window.currentGalleryIndex = window.galleryImages.indexOf(imgSrc);
+    }
+
+    // Update active thumbnail
+    updateActiveThumbnail();
+}
+
+function updateActiveThumbnail() {
+    const thumbs = document.querySelectorAll('.gallery-thumb');
+    thumbs.forEach((thumb, index) => {
+        if (index === window.currentGalleryIndex) {
+            thumb.classList.add('active');
+        } else {
+            thumb.classList.remove('active');
+        }
+    });
 }
 
 function handleModalEscape(e) {
