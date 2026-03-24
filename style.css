@@ -1082,6 +1082,37 @@ nav {
     font-weight: 600;
 }
 
+.project-card-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.project-play-store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #34a853 0%, #2d8e47 100%);
+    color: white;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 168, 83, 0.3);
+}
+
+.project-play-store-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(52, 168, 83, 0.4);
+    background: linear-gradient(135deg, #2d8e47 0%, #34a853 100%);
+}
+
+.project-play-store-btn i {
+    font-size: 1.125rem;
+}
+
 .project-links {
     display: flex;
     gap: 16px;
@@ -1585,6 +1616,13 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .project-play-store-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.8125rem;
+        padding: 12px 16px;
+    }
+
     .tech-items {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1775,6 +1813,116 @@ footer {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* Image Gallery Styles */
+.image-gallery {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.gallery-main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gallery-main img {
+    max-width: 100%;
+    max-height: calc(90vh - 150px);
+    object-fit: contain;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.gallery-nav:hover {
+    background: rgba(99, 102, 241, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-prev {
+    left: 16px;
+}
+
+.gallery-next {
+    right: 16px;
+}
+
+.gallery-nav i {
+    font-size: 1.25rem;
+}
+
+.gallery-thumbs {
+    display: flex;
+    gap: 12px;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.gallery-thumbs::-webkit-scrollbar {
+    height: 6px;
+}
+
+.gallery-thumbs::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.gallery-thumbs::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.gallery-thumb {
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    opacity: 0.6;
+}
+
+.gallery-thumb:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.gallery-thumb.active {
+    border-color: var(--primary-color);
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
 .modal-info {
     width: 400px;
     padding: 40px;
@@ -1870,6 +2018,25 @@ footer {
         min-height: 300px;
         max-height: 60vh;
     }
+
+    .gallery-main img {
+        max-height: calc(60vh - 120px);
+    }
+
+    .gallery-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-nav i {
+        font-size: 1rem;
+    }
+
+    .gallery-thumb {
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1893,6 +2060,35 @@ footer {
 
     .modal-title {
         font-size: 1.5rem;
+    }
+
+    .image-gallery {
+        padding: 8px;
+        gap: 12px;
+    }
+
+    .gallery-nav {
+        width: 36px;
+        height: 36px;
+    }
+
+    .gallery-prev {
+        left: 8px;
+    }
+
+    .gallery-next {
+        right: 8px;
+    }
+
+    .gallery-thumbs {
+        padding: 6px;
+        gap: 8px;
+    }
+
+    .gallery-thumb {
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
     }
 }
 
