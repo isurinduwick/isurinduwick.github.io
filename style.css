@@ -1145,6 +1145,172 @@ nav {
 }
 
 /* ============================================
+   Certifications Section
+   ============================================ */
+
+.certifications {
+    background-color: var(--body-bg);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 28px;
+}
+
+.cert-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.cert-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cert-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cert-icon.shrm {
+    background: white;
+}
+
+.cert-icon.hrci {
+    background: white;
+}
+
+.cert-icon.pmi {
+    background: white;
+}
+
+.cert-icon.comptia {
+    background: white;
+}
+
+.cert-icon.linkedin {
+    background: white;
+}
+
+.cert-icon.microsoft {
+    background: white;
+}
+
+.cert-icon.azure {
+    background: white;
+}
+
+.cert-icon.greatlearning {
+    background: white;
+}
+
+.cert-icon.postman {
+    background: white;
+}
+
+.cert-date {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+.cert-card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.8em;
+}
+
+.cert-issuer {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    min-height: 3em;
+}
+
+.cert-skills span {
+    font-size: 0.75rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.cert-credential {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    margin-top: auto;
+    padding: 10px 0;
+}
+
+.cert-credential:hover {
+    gap: 12px;
+    color: var(--secondary-color);
+}
+
+.cert-credential i {
+    font-size: 1rem;
+}
+
+/* ============================================
    Contact Section
    ============================================ */
 
@@ -1614,6 +1780,11 @@ footer {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .project-play-store-btn {
