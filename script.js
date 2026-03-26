@@ -349,77 +349,143 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ============================================
-    // Contact Form Handling
+    // Contact Form Handling with EmailJS
     // ============================================
+    // TODO: Replace these with your EmailJS credentials
+    // Get them from: https://dashboard.emailjs.com/
+    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';  // Replace with your public key
+    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';  // Replace with your service ID
+    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your template ID
+
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+
     const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-
-            // Show success message
             const submitButton = contactForm.querySelector('.btn-submit');
             const originalText = submitButton.innerHTML;
 
-            submitButton.innerHTML = '<i class="fas fa-check"></i> <span>Message Sent!</span>';
-            submitButton.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+            // Show loading state
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending...</span>';
             submitButton.disabled = true;
 
-            // Reset form
-            contactForm.reset();
+            // Check if EmailJS is configured
+            if (typeof emailjs === 'undefined' || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
+                // EmailJS not configured - show warning
+                showNotification(
+                    'warning',
+                    '<i class="fas fa-exclamation-triangle"></i> EmailJS not configured yet!',
+                    'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                    'rgba(245, 158, 11, 0.3)'
+                );
 
-            // Create success notification
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 24px;
-                background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-                color: white;
-                padding: 16px 24px;
-                border-radius: 12px;
-                box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-                z-index: 10000;
-                animation: slideInRight 0.5s ease;
-                font-weight: 600;
-            `;
-            notification.innerHTML = `
-                <i class="fas fa-check-circle"></i>
-                Thank you! I'll get back to you soon.
-            `;
+                console.warn('EmailJS not configured. Please add your credentials in script.js');
+                console.log('Form data:', {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                });
 
-            document.body.appendChild(notification);
-
-            setTimeout(() => {
-                notification.style.animation = 'slideOutRight 0.5s ease';
+                // Reset button
                 setTimeout(() => {
-                    notification.remove();
-                }, 500);
-            }, 3000);
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                }, 2000);
+                return;
+            }
 
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                submitButton.innerHTML = originalText;
-                submitButton.style.background = '';
-                submitButton.disabled = false;
-            }, 3000);
+            // Prepare email parameters
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_name: 'Isurindu Wickramasinghe'
+            };
 
-            // In production, you would send the form data to your backend:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // });
+            // Send email using EmailJS
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                .then(() => {
+                    // Success!
+                    submitButton.innerHTML = '<i class="fas fa-check"></i> <span>Message Sent!</span>';
+                    submitButton.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
 
-            console.log('Form submitted:', formData);
+                    // Reset form
+                    contactForm.reset();
+
+                    // Show success notification
+                    showNotification(
+                        'success',
+                        '<i class="fas fa-check-circle"></i> Thank you! I\'ll get back to you soon.',
+                        'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                        'rgba(16, 185, 129, 0.3)'
+                    );
+
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText;
+                        submitButton.style.background = '';
+                        submitButton.disabled = false;
+                    }, 3000);
+                })
+                .catch((error) => {
+                    // Error occurred
+                    console.error('EmailJS Error:', error);
+
+                    submitButton.innerHTML = '<i class="fas fa-times"></i> <span>Failed to Send</span>';
+                    submitButton.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+
+                    // Show error notification
+                    showNotification(
+                        'error',
+                        '<i class="fas fa-times-circle"></i> Failed to send message. Please try again.',
+                        'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                        'rgba(239, 68, 68, 0.3)'
+                    );
+
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText;
+                        submitButton.style.background = '';
+                        submitButton.disabled = false;
+                    }, 3000);
+                });
         });
+    }
+
+    // Helper function to show notifications
+    function showNotification(type, message, background, boxShadow) {
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 100px;
+            right: 24px;
+            background: ${background};
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px ${boxShadow};
+            z-index: 10000;
+            animation: slideInRight 0.5s ease;
+            font-weight: 600;
+        `;
+        notification.innerHTML = message;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideOutRight 0.5s ease';
+            setTimeout(() => {
+                notification.remove();
+            }, 500);
+        }, 3000);
     }
 
     // ============================================
